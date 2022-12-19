@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de games Marcolino</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Signika:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header class="navbar-expand-lg sticky-top pt-4" id="cabecalho">
+        <div class="navbar container">
+            <h1 class="fs-3" style="color:blue;">
+                <span style="font-style:italic; border-bottom: 2px solid #fff; padding-bottom: 2px">
+                    MAR<img class="pb-3" src="./imgs/pacman.png" style="height: 60px" alt="pac-man"></span><span style="padding-bottom: 2px; font-style:italic; border-bottom: 2px solid #fff;">OLINO</span>
+                <span class="text-color" style="vertical-align: bottom; font-style: italic; padding-top: 5px; border-top: 2px solid #fff;">
+                    GAMESTORE</span>
+                    <img src="./imgs/branco.png" style="height: 35px; vertical-align: bottom; margin-bottom:5px; margin-left: -10px;" alt="fantasma do pac-man">
+                
+            </h1>
+            <form class="d-flex justify-content-around">
+            <button class="navbar-toggler mb-2" data-bs-toggle="collapse" data-bs-target="#menu-navegacao" style="background-color:#fff; margin-left: 35px;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div>
+                <input type="search" style="border:none; border-bottom: 2px solid #fff;
+                background-color: transparent; outline: none;
+                color: #fff; width: 220px;" type="text" placeholder="Digite o que está buscando">
+                <button class="btn btn-light" type="submit">
+                    <i class="bi bi-search"></i>
+                </button>
+                </div>
+            </form>
+        </div> 
+        <div class="navbar p-0 p-lg-2" style="background-color:rgb(31, 28, 28);">
+            <nav class="navbar-collapse collapse justify-content-center" id="menu-navegacao">
+                <ul class="nav nav-pills d-block d-lg-flex" style="text-align:center">
+                    <li class="nav-item fw-bold">
+                        <a href="#em-destaque" class="nav-link d-none d-md-block active"> <!--Bloqueia a exibição em telas menores que md-->
+                            <i class="bi bi-bookmark-star me-1"></i>
+                            Em Destaque
+                        </a>
+                    </li>
+                    <li class="nav-item d-xs-none fw-bold"> <!-- Bloqueia a exibição em telas maiores que xs (celulares com width menor)-->
+                        <a href="#mobile" class="nav-link active">
+                            <i class="bi bi-book me-1"></i>
+                            Em Destaque
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold"> 
+                        <a href="#catalogo" class="nav-link">
+                            <i class="bi bi-book me-1"></i>
+                            Catálogo
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a href="#fale-conosco" class="nav-link">
+                            <i class="bi bi-chat-left-text me-1"></i>
+                            Fale Conosco
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div data-bs-spy="scroll" data-bs-target="cabecalho" data-bs-smooth-scroll="true">
+        <section>
+            <div class="carousel slide" style="max-width:100%" data-bs-ride="carousel" id="carousel"> 
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000"> 
+                        <img class="w-100" src="./imgs/slide-1.webp" style="height: 460px" alt="banner de jogos em promoção">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img class="w-100" src="./imgs/slide-2.jpg" style="height: 460px" alt="banner de jogos em promoção">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img class="w-100" src="./imgs/slide-3.jpg" style="height: 460px" alt="banner de jogos em promoção">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel" class="active" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                </div>
+            </div>
+        </section>
+
+                                    <!--Carousel Mobile-->
+        <section id="mobile">
+        <div class="container">
+            <h2 class="mt-5 mb-3 text-center">Em <span class="text-color">Destaque</span></h2>
+            <div class="carousel slide" data-bs-ride="carousel" id="carousel3"> 
+                <div class="carousel-inner">
+                    <div class="col-12">
+                        <div class="carousel-item active">
+                            <div class="card text-bg-dark" style="text-align:center;">
+                                <div class="card-header">
+                                    <h5>Super Mario 3ds Bowser's Fury</h5>
+                                </div>
+                                <img src="./imgs/mario.jpg" style="max-width: 100%; height: 400px;" />
+                                <div class="card-body">
+                                    <h6 class="card-title"><i><del>de R$ 249,90</del></i></h6>
+                                    <h3 class="card-subtitle" style="color:red; border-radius: 1em; background-color: yellow;">Por R$ 195,90</h3>
+                                    <p class="card-text m-1">
+                                        * Oferta por tempo limitado</p>
+                                    <a href="#" class="btn btn-primary w-100">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="carousel-item">
+                            <div class="card text-bg-dark" style="text-align:center">
+                                <div class="card-header">
+                                    <h5>Call of Duty Modern Warfare II</h5>
+                                </div>
+                                <img src="./imgs/callofduty.jpg" style="max-width: 100%; height: 400px;"/>
+                                <div class="card-body">
+                                    <h6 class="card-title"><i><del>de R$ 211,00</del></i></h6>
+                                    <h3 class="card-subtitle" style="color:red; border-radius: 1em; background-color: yellow;">Por R$ 170,90</h3>
+                                    <p class="card-text m-1">
+                                        * Oferta por tempo limitado</p>
+                                    <a href="#" class="btn btn-primary w-100">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="carousel-item">
+                            <div class="card text-bg-dark" style="text-align:center">
+                                <div class="card-header">
+                                    <h5>Elden Ring (últimas unidades)</h5>
+                                </div>
+                                <img src="./imgs/elden-ring.webp" style="max-width: 100%; height: 400px;"/>
+                                <div class="card-body">
+                                    <h6 class="card-title"><i><del>de R$ 188,90</del></i></h6>
+                                    <h3 class="card-subtitle" style="color:red; border-radius: 1em; background-color: yellow;">Por R$ 165,90</h3>
+                                    <p class="card-text m-1">
+                                        * Oferta por tempo limitado</p>
+                                    <a href="#" class="btn btn-primary w-100">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="carousel-item">
+                            <div class="card text-bg-dark" style="text-align:center">
+                                <div class="card-header">
+                                    <h5>God of War - Ragnarok (Lançamento)</h5>
+                                </div>
+                                <img src="./imgs/godofwar.jpg" style="max-width: 100%; height: 400px;"/>
+                                <div class="card-body">
+                                    <h6 class="card-title"><i><del>de R$ 325,90</del></i></h6>
+                                    <h3 class="card-subtitle" style="color:red; border-radius: 1em; background-color: yellow;">Por R$ 285,50</h3>
+                                    <p class="card-text m-1">
+                                        * O Mais barato da internet !</p>
+                                    <a href="#" class="btn btn-primary w-100">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev" style="width: 50px; height: 100px; margin-left: 20px; margin-top: 14em; border-radius: 1em; background-color: blue;">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next" style="width: 50px; height: 100px; margin-right: 20px; margin-top: 14em; border-radius: 1em; background-color:red;">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel3" class="active" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mt-5" id="em-destaque">
+        <div class="container mt-3">
+            <h2 class="mt-2 mb-3 text-center">Em <span class="text-color">Destaque</span></h2>
+            <div class="row">
+                <div class="carousel slide"  id="carousel2"> 
+                    <div class="carousel-inner">
+
+                                            <!--Primeiro carousel-->
+                        <div class="carousel-item active d-flex">
+                            <div class="col-md-6 col-sm-12 col-lg-3 p-2">
+                                <div class="card text-bg-dark" style="text-align:center;">
+                                    <div class="card-header">
+                                        <h5>Super Mario 3ds Bowser's Fury</h5>
+                                    </div>
+                                    <img src="./imgs/mario.jpg" style="max-width: 100%; height: 400px;" />
+                                    <div class="card-body">
+                                        <h6 class="card-title"><i><del>de R$ 249,90</del></i></h6>
+                                        <h3 class="card-subtitle" style="color:red; border-radius: 1em; background-color: yellow;">Por R$ 195,90</h3>
+                                        <p class="card-text m-1">
+                                            * Oferta por tempo limitado</p>
+                                        <a href="#" class="btn btn-primary w-100">Comprar</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-lg-3 p-2">
+                                <div class="card text-bg-dark" style="text-align:center">
+                                    <div class="card-header">
+                                        <h5>Call of Duty Modern Warfare II</h5>
+                                    </div>
+                                    <img src="./imgs/callofduty.jpg" style="max-width: 100%; height: 400px;"/>
+                                    <div class="card-body">
+                                        <h6 class="card-title"><i><del>de R$ 211,00</del></i></h6>
+                                        <h3 class="card-subtitle" style="color:red; border-radius: 1em; background-color: yellow;">Por R$ 170,90</h3>
+                                        <p class="card-text m-1">
+                                            * Oferta por tempo limitado</p>
+                                        <a href="#" class="btn btn-primary w-100">Comprar</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-lg-3 p-2">
+                                <div class="card text-bg-dark" style="text-align:center">
+                                    <div class="card-header">
+                                        <h5>Elden Ring (últimas unidades)</h5>
+                                    </div>
+                                    <img src="./imgs/elden-ring.webp" style="max-width: 100%; height: 400px;"/>
+                                    <div class="card-body">
+                                        <h6 class="card-title"><i><del>de R$ 188,90</del></i></h6>
+                                        <h3 class="card-subtitle" style="color:red; border-radius: 1em; background-color: yellow;">Por R$ 165,90</h3>
+                                        <p class="card-text m-1">
+                                            * Oferta por tempo limitado</p>
+                                        <a href="#" class="btn btn-primary w-100">Comprar</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-lg-3 p-2">
+                                <div class="card text-bg-dark" style="text-align:center">
+                                    <div class="card-header">
+                                        <h5>God of War - Ragnarok (Lançamento)</h5>
+                                    </div>
+                                    <img src="./imgs/godofwar.jpg" style="max-width: 100%; height: 400px;"/>
+                                    <div class="card-body">
+                                        <h6 class="card-title"><i><del>de R$ 325,90</del></i></h6>
+                                        <h3 class="card-subtitle" style="color:red; border-radius: 1em; background-color: yellow;">Por R$ 285,50</h3>
+                                        <p class="card-text m-1">
+                                            * O Mais barato da internet !</p>
+                                        <a href="#" class="btn btn-primary w-100">Comprar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                                            <!--Segundo carousel-->
+                        <div class="carousel-item">
+                            <div class="card text-bg-dark" style="text-align:center;">
+                                <div class="card-header">
+                                    <h5>Console + jogos </h5>
+                                </div>
+                                <img class="w-100" style="height: 522px;" src="./imgs/mega-pack.jpg" alt="imagem de uma promoção da sony">
+                                <div class="card-body">
+                                    <a href="#" class="btn btn-primary w-100">Conferir Oferta</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card text-bg-dark" style="text-align:center">
+                                <div class="card-header">
+                                    <h5>Imperdível !</h5>
+                                </div>
+                                <img class="w-100" style="height: 522px;" src="./imgs/carousel2-2.avif" alt="imagem de uma promoção da nintendo online">
+                                <div class="card-body">
+                                    <a href="#" class="btn btn-primary w-100">Conferir Oferta</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev" style="width: 50px; height: 100px; margin-left: 20px; margin-top: 14em; border-radius: 1em; background-color: blue;">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next" style="width: 50px; height: 100px; margin-right: 20px; margin-top: 14em; border-radius: 1em; background-color:red;">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel2" class="active" data-bs-slide-to="0"></button>
+                        <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carousel2" data-bs-slide-to="2"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="catalogo" class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <h2 class="text-center mb-3">Nosso <span class="text-color">Catálogo</span></h2>
+            </div>
+            <div class="row">
+                <aside class="col-md-3">
+                    <nav class="nav nav-pills flex-column">
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#nintendo" class="fw-bold text-start nav-link text-color active"><i class="bi bi-nintendo-switch me-1"></i>Nintendo Switch</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#play4" class="fw-bold text-start nav-link text-color"><i class="bi bi-playstation me-1"></i>Playstation 4</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#play5" class="fw-bold text-start nav-link text-color"><i class="bi bi-playstation me-1"></i>Playstation 5</button>
+                        <button type="button" data-bs-toggle="tab" data-bs-target="#xbox" class="fw-bold text-start nav-link text-color"><i class="bi bi-xbox me-1"></i>Xbox Series s/x One</button>
+                    </nav>
+                </aside>
+                <div class="col-md-9">  
+                    <div class="tab-content"> 
+                        <div class="tab-pane active" id="nintendo">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <img class="mb-2" style="height: 250px;" src="./imgs/nintendo/mario.jpg" alt="game super mario odyssey">
+                                    <h5 class="text-color text-center fs-4 fw-bold">Super Mario Odyssey</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
+                                    </p>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <img class="mb-2" style="height: 250px;" src="./imgs/nintendo/mario-kart.jpg" alt="game mario kart 8">
+                                    <h5 class="text-color text-center fs-4 fw-bold">Mario Kart 8 Deluxe</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
+                                    </p>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <img class="mb-2" style="height: 250px;" src="./imgs/nintendo/splatoon.webp" alt="game splatoon 3">
+                                    <h5 class="text-color text-center fs-4 fw-bold">Splatoon 3</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
+                                    </p>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <img class="mb-2" style="height: 250px;" src="./imgs/nintendo/zelda.webp" alt="game zelda tears of the kingdom">
+                                    <h5 class="text-color text-center fs-4 fw-bold">The legend of Zelda - Tears of the Kingdom</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
+                                    </p>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <img class="mb-2" style="height: 250px;" src="./imgs/nintendo/splatoon.webp" alt="game splatoon 3">
+                                    <h5 class="text-color text-center fs-4 fw-bold">Splatoon 3</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
+                                    </p>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <img class="mb-2" style="height: 250px;" src="./imgs/nintendo/mario-kart.jpg" alt="game mario kart 8">
+                                    <h5 class="text-color text-center fs-4 fw-bold">Mario Kart 8 Deluxe</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="play4">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <img class="mb-2" style="height: 250px;" src="./imgs/ps4/elden-ring.webp" alt="game elden ring">
+                                    <h5 class="text-color text-center fs-4 fw-bold">Elden Ring</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
+                                    </p>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <img class="mb-2" style="height: 250px;" src="./imgs/ps4/granturismo.webp" alt="game gran turismo sport">
+                                    <h5 class="text-color text-center fs-4 fw-bold">Gran Turismo Sport</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
+                                    </p>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <img class="mb-2" style="height: 250px;" src="./imgs/ps4/hogwarts.webp" alt="game hogwarts legacy">
+                                    <h5 class="text-color text-center fs-4 fw-bold">Hogwarts Legacy</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
+                                    </p>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <img class="mb-2" style="height: 250px;" src="./imgs/ps4/spiderman.jpg" alt="game spider-man - miles morales">
+                                    <h5 class="text-color text-center fs-4 fw-bold">Spider-man Miles Morales</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="play5">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <img class="mb-2" style="height: 250px;" src="./imgs/ps5/demonsouls.jpg" alt="game demon souls">
+                                    <h5 class="text-color text-center fs-4 fw-bold">Demon Souls</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
+                                    </p>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <img class="mb-2" style="height: 250px;" src="./imgs/ps5/ghost.webp" alt="game GhostWire">
+                                    <h5 class="text-color text-center fs-4 fw-bold">GhostWire</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
+                                    </p>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <img class="mb-2" style="height: 250px;" src="./imgs/ps5/godofwar.jpg" alt="game god of war-ragnarok">
+                                    <h5 class="text-color text-center fs-4 fw-bold">God of War - Ragnarok</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="xbox">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <img class="mb-2" style="height: 250px;" src="./imgs/xbox/backblood.webp" alt="game back-blood 4">
+                                    <h5 class="text-color text-center fs-4 fw-bold">Back-Blood 4</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
+                                    </p>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <img class="mb-2" style="height: 250px;" src="./imgs/xbox/callofduty.jpg" alt="game call of duty modern warfare 2">
+                                    <h5 class="text-color text-center fs-4 fw-bold">Call of Duty Modern Warfare II</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
+                                    </p>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <img class="mb-2" style="height: 250px;" src="./imgs/xbox/fifa.webp" alt="game fifa 23">
+                                    <h5 class="text-color text-center fs-4 fw-bold">Fifa 23</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
+                                    </p>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <img class="mb-2" style="height: 250px;" src="./imgs/xbox/backblood.webp" alt="game back-blood 4">
+                                    <h5 class="text-color text-center fs-4 fw-bold">Back-Blood 4</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
+                                    </p>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <img class="mb-2" style="height: 250px;" src="./imgs/xbox/callofduty.jpg" alt="game call of duty modern warfare 2">
+                                    <h5 class="text-color text-center fs-4 fw-bold">Call of Duty Modern Warfare II</h5>
+                                    <p>
+                                        Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="fale-conosco" class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <h2 class="text-center mb-5">Fale <span class="text-color">conosco</span></h2>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <form>
+                        <div class="mb-2">
+                            <label for="nome" class="form-label fw-bold text-color">Seu nome*</label>
+                            <input type="text" id="nome" class="form-control" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="email" class="form-label fw-bold text-color">Seu e-mail*</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="telefone" class="form-label fw-bold text-color">Seu telefone (opcional)</label>
+                            <input type="tel" id="telefone" class="form-control">
+                        </div>
+                        <div class="mb-2">
+                            <label for="mensagem" class="form-label fw-bold text-color">Sua mensagem*</label>
+                            <textarea id="mensagem" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <h3 class="fs-4 text-color">
+                            <i class="bi bi-hand-thumbs-up-fill"></i>
+                            Redes sociais</h3>
+                        <ul class="social-links d-flex" style="list-style:none;">
+                            <li class="fs-5">
+                                <a href="#">
+                                    <i class="bi bi-facebook me-2"></i>
+                                </a>
+                            </li>
+                            <li class="fs-5 ms-1 me-1">
+                                <a href="#">
+                                    <i class="bi bi-instagram me-2"></i>
+                                </a>
+                            </li>
+                            <li class="fs-5">
+                                <a href="#">
+                                    <i class="bi bi-whatsapp"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row mt-5">
+                        <h3 class="fs-4 text-color">
+                            <i class="bi bi-cursor-fill"></i>
+                            Onde estamos
+                        </h3>
+                        <p class="mb-5">
+                            Rua Exemplo, 152 - Bairro Marcolino Gamestore - Carapicuíba - SP
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="fs-4 text-color">
+                        <i class="bi bi-mailbox2"></i>
+                        Formas de envio
+                    </h3>
+                    <img src="./imgs/sedex.png" style="width: 100px" alt="">
+                    <img src="./imgs/loggi.png" style="width: 100px" alt="">
+                    <img src="./imgs/jadlog.png" style="width: 100px" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+header {
+    background-color: rgb(0, 0, 0);
+}
+
+header .container h1 {
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    font-family: 'Signika', sans-serif;
+    background-color: rgba(0, 0, 0, 0.247);
+}
+
+.text-color {
+    color:red;
+}
+
+.container h2 {
+    font-family: 'Press Start 2P', cursive;
+    color:blue;
+}
+
+#catalogo .nav button.active {
+    color:black;
+}
+
+#mobile {
+    display:none;
+}
+
+@media screen and (max-width: 767px) {
+    #mobile {
+        display: flex;
+        padding-top: 5px;
+    }
+
+    #em-destaque {
+        display: none;
+    }
+
+    .container h1 span {
+        font-size: 35px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    aside .nav {
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    
+    #catalogo img, header form {
+        width: 100%;
+    }
+
+    #fale-conosco form {
+        margin-bottom: 2em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    header form {
+        width: 100%;
+    }
+
+    h1 {
+        width: 100%;
+        text-align: center;
+    }
+}
