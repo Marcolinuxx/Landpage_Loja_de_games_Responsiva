@@ -16,22 +16,20 @@
 <body>
     <header class="navbar-expand-lg sticky-top pt-4" id="cabecalho">
         <div class="navbar container">
-            <h1 class="fs-3" style="color:blue;">
-                <span style="font-style:italic; border-bottom: 2px solid #fff; padding-bottom: 2px">
-                    MAR<img class="pb-3" src="./imgs/pacman.png" style="height: 60px" alt="pac-man"></span><span style="padding-bottom: 2px; font-style:italic; border-bottom: 2px solid #fff;">OLINO</span>
+            <h1 class="fs-2" style="color:blue;">
+                <span class="mar-margin" style="font-style:italic; border-bottom: 2px solid #fff; padding-bottom: 2px">
+                    MAR<img class="pb-3" src="./imgs/pacman.png" style="height: 60px" alt="pac-man"></span><span class="olino-margin" style="padding-bottom: 2px; font-style:italic; border-bottom: 2px solid #fff;">OLINO</span>
                 <span class="text-color" style="vertical-align: bottom; font-style: italic; padding-top: 5px; border-top: 2px solid #fff;">
-                    GAMESTORE</span>
-                    <img src="./imgs/branco.png" style="height: 35px; vertical-align: bottom; margin-bottom:5px; margin-left: -10px;" alt="fantasma do pac-man">
-                
+                    G<img src="./imgs/branco.png" style="margin: 0 2px 0 5px; height: 30px; vertical-align: top;" alt="fantasma do pac-man">MESTORE</span>
             </h1>
-            <form class="d-flex justify-content-around">
-            <button class="navbar-toggler mb-2" data-bs-toggle="collapse" data-bs-target="#menu-navegacao" style="background-color:#fff; margin-left: 35px;">
+            <form class="d-flex justify-content-around" id="menu-hamburguer">
+            <button type="button" class="navbar-toggler mb-2" data-bs-toggle="collapse" data-bs-target="#menu-navegacao" style="background-color:#fff; margin-left: 35px;">
                 <span class="navbar-toggler-icon"></span>
             </button>
                 <div>
-                <input type="search" style="border:none; border-bottom: 2px solid #fff;
+                <input type="search" style="vertical-align: bottom; border:none; border-bottom: 2px solid #fff;
                 background-color: transparent; outline: none;
-                color: #fff; width: 220px;" type="text" placeholder="Digite o que está buscando">
+                color: #fff;" type="text" placeholder="Digite o que busca">
                 <button class="btn btn-light" type="submit">
                     <i class="bi bi-search"></i>
                 </button>
@@ -49,7 +47,7 @@
                     </li>
                     <li class="nav-item d-xs-none d-md-none fw-bold"> <!-- Bloqueia a exibição em telas maiores que xs (celulares com width menor)-->
                         <a href="#mobile" class="nav-link active">
-                            <i class="bi bi-book me-1"></i>
+                            <i class="bi bi-bookmark-star me-1"></i>
                             Em Destaque
                         </a>
                     </li>
@@ -71,17 +69,17 @@
     </header>
     
     <div data-bs-spy="scroll" data-bs-target="cabecalho" data-bs-smooth-scroll="true">
-        <section>
+        <section id="slide-inicial">
             <div class="carousel slide" style="max-width:100%" data-bs-ride="carousel" id="carousel"> 
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="3000"> 
-                        <img class="w-100" src="./imgs/slide-1.webp" style="height: 460px" alt="banner de jogos em promoção">
+                        <img class="w-100" src="./imgs/slide-1.webp" style="max-height: 460px" alt="banner de jogos em promoção">
                     </div>
                     <div class="carousel-item" data-bs-interval="3000">
-                        <img class="w-100" src="./imgs/slide-2.jpg" style="height: 460px" alt="banner de jogos em promoção">
+                        <img class="w-100" src="./imgs/slide-2.jpg" style="max-height: 460px" alt="banner de jogos em promoção">
                     </div>
                     <div class="carousel-item" data-bs-interval="3000">
-                        <img class="w-100" src="./imgs/slide-3.jpg" style="height: 460px" alt="banner de jogos em promoção">
+                        <img class="w-100" src="./imgs/slide-3.jpg" style="max-height: 460px" alt="banner de jogos em promoção">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
@@ -317,43 +315,43 @@
                     <div class="tab-content"> 
                         <div class="tab-pane active" id="nintendo">
                             <div class="row">
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <img class="mb-2" style="height: 250px;" src="./imgs/nintendo/mario.jpg" alt="game super mario odyssey">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <img class="mb-2 w-100" style="height: 250px;" src="./imgs/nintendo/mario.jpg" alt="game super mario odyssey">
                                     <h5 class="text-color text-center fs-4 fw-bold">Super Mario Odyssey</h5>
                                     <p>
                                         Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
                                     </p>
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <img class="mb-2" style="height: 250px;" src="./imgs/nintendo/mario-kart.jpg" alt="game mario kart 8">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <img class="mb-2 w-100" style="height: 250px;" src="./imgs/nintendo/mario-kart.jpg" alt="game mario kart 8">
                                     <h5 class="text-color text-center fs-4 fw-bold">Mario Kart 8 Deluxe</h5>
                                     <p>
                                         Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
                                     </p>
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <img class="mb-2" style="height: 250px;" src="./imgs/nintendo/splatoon.webp" alt="game splatoon 3">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <img class="mb-2 w-100" style="height: 250px;" src="./imgs/nintendo/splatoon.webp" alt="game splatoon 3">
                                     <h5 class="text-color text-center fs-4 fw-bold">Splatoon 3</h5>
                                     <p>
                                         Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
                                     </p>
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <img class="mb-2" style="height: 250px;" src="./imgs/nintendo/zelda.webp" alt="game zelda tears of the kingdom">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <img class="mb-2 w-100" style="height: 250px;" src="./imgs/nintendo/zelda.webp" alt="game zelda tears of the kingdom">
                                     <h5 class="text-color text-center fs-4 fw-bold">The legend of Zelda - Tears of the Kingdom</h5>
                                     <p>
                                         Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
                                     </p>
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <img class="mb-2" style="height: 250px;" src="./imgs/nintendo/splatoon.webp" alt="game splatoon 3">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <img class="mb-2 w-100" style="height: 250px;" src="./imgs/nintendo/splatoon.webp" alt="game splatoon 3">
                                     <h5 class="text-color text-center fs-4 fw-bold">Splatoon 3</h5>
                                     <p>
                                         Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
                                     </p>
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <img class="mb-2" style="height: 250px;" src="./imgs/nintendo/mario-kart.jpg" alt="game mario kart 8">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <img class="mb-2 w-100" style="height: 250px;" src="./imgs/nintendo/mario-kart.jpg" alt="game mario kart 8">
                                     <h5 class="text-color text-center fs-4 fw-bold">Mario Kart 8 Deluxe</h5>
                                     <p>
                                         Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
@@ -363,29 +361,29 @@
                         </div>
                         <div class="tab-pane" id="play4">
                             <div class="row">
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <img class="mb-2" style="height: 250px;" src="./imgs/ps4/elden-ring.webp" alt="game elden ring">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <img class="mb-2 w-100" style="height: 250px;" src="./imgs/ps4/elden-ring.webp" alt="game elden ring">
                                     <h5 class="text-color text-center fs-4 fw-bold">Elden Ring</h5>
                                     <p>
                                         Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
                                     </p>
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <img class="mb-2" style="height: 250px;" src="./imgs/ps4/granturismo.webp" alt="game gran turismo sport">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <img class="mb-2 w-100" style="height: 250px;" src="./imgs/ps4/granturismo.webp" alt="game gran turismo sport">
                                     <h5 class="text-color text-center fs-4 fw-bold">Gran Turismo Sport</h5>
                                     <p>
                                         Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
                                     </p>
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <img class="mb-2" style="height: 250px;" src="./imgs/ps4/hogwarts.webp" alt="game hogwarts legacy">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <img class="mb-2 w-100" style="height: 250px;" src="./imgs/ps4/hogwarts.webp" alt="game hogwarts legacy">
                                     <h5 class="text-color text-center fs-4 fw-bold">Hogwarts Legacy</h5>
                                     <p>
                                         Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
                                     </p>
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <img class="mb-2" style="height: 250px;" src="./imgs/ps4/spiderman.jpg" alt="game spider-man - miles morales">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <img class="mb-2 w-100" style="height: 250px;" src="./imgs/ps4/spiderman.jpg" alt="game spider-man - miles morales">
                                     <h5 class="text-color text-center fs-4 fw-bold">Spider-man Miles Morales</h5>
                                     <p>
                                         Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
@@ -395,22 +393,22 @@
                         </div>
                         <div class="tab-pane" id="play5">
                             <div class="row">
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <img class="mb-2" style="height: 250px;" src="./imgs/ps5/demonsouls.jpg" alt="game demon souls">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <img class="mb-2 w-100" style="height: 250px;" src="./imgs/ps5/demonsouls.jpg" alt="game demon souls">
                                     <h5 class="text-color text-center fs-4 fw-bold">Demon Souls</h5>
                                     <p>
                                         Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
                                     </p>
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <img class="mb-2" style="height: 250px;" src="./imgs/ps5/ghost.webp" alt="game GhostWire">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <img class="mb-2 w-100" style="height: 250px;" src="./imgs/ps5/ghost.webp" alt="game GhostWire">
                                     <h5 class="text-color text-center fs-4 fw-bold">GhostWire</h5>
                                     <p>
                                         Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
                                     </p>
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <img class="mb-2" style="height: 250px;" src="./imgs/ps5/godofwar.jpg" alt="game god of war-ragnarok">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <img class="mb-2 w-100" style="height: 250px;" src="./imgs/ps5/godofwar.jpg" alt="game god of war-ragnarok">
                                     <h5 class="text-color text-center fs-4 fw-bold">God of War - Ragnarok</h5>
                                     <p>
                                         Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
@@ -420,36 +418,36 @@
                         </div>
                         <div class="tab-pane" id="xbox">
                             <div class="row">
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <img class="mb-2" style="height: 250px;" src="./imgs/xbox/backblood.webp" alt="game back-blood 4">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <img class="mb-2 w-100" style="height: 250px;" src="./imgs/xbox/backblood.webp" alt="game back-blood 4">
                                     <h5 class="text-color text-center fs-4 fw-bold">Back-Blood 4</h5>
                                     <p>
                                         Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
                                     </p>
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <img class="mb-2" style="height: 250px;" src="./imgs/xbox/callofduty.jpg" alt="game call of duty modern warfare 2">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <img class="mb-2 w-100" style="height: 250px;" src="./imgs/xbox/callofduty.jpg" alt="game call of duty modern warfare 2">
                                     <h5 class="text-color text-center fs-4 fw-bold">Call of Duty Modern Warfare II</h5>
                                     <p>
                                         Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
                                     </p>
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <img class="mb-2" style="height: 250px;" src="./imgs/xbox/fifa.webp" alt="game fifa 23">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <img class="mb-2 w-100" style="height: 250px;" src="./imgs/xbox/fifa.webp" alt="game fifa 23">
                                     <h5 class="text-color text-center fs-4 fw-bold">Fifa 23</h5>
                                     <p>
                                         Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
                                     </p>
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <img class="mb-2" style="height: 250px;" src="./imgs/xbox/backblood.webp" alt="game back-blood 4">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <img class="mb-2 w-100" style="height: 250px;" src="./imgs/xbox/backblood.webp" alt="game back-blood 4">
                                     <h5 class="text-color text-center fs-4 fw-bold">Back-Blood 4</h5>
                                     <p>
                                         Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
                                     </p>
                                 </div>
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <img class="mb-2" style="height: 250px;" src="./imgs/xbox/callofduty.jpg" alt="game call of duty modern warfare 2">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <img class="mb-2 w-100" style="height: 250px;" src="./imgs/xbox/callofduty.jpg" alt="game call of duty modern warfare 2">
                                     <h5 class="text-color text-center fs-4 fw-bold">Call of Duty Modern Warfare II</h5>
                                     <p>
                                         Lorem ipsum dolor sit amet Officiis fuga dolorum doloremque.
